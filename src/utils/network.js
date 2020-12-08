@@ -38,13 +38,21 @@ module.exports = function (name, training_data=null) {
     }
 
     var trained_network = require('./net-data/trained_network.json');
+    var is_trained = false
 
     if(trained_network[this.name]) {
         this.network.fromJSON(trained_network[this.name])
         console.log("Loaded network from cached data!")
+    } else {
+        if(training_data) {
+            this.train(training_data)
+            is_trained = true
+        } else {
+            this.train()
+        }
     }
 
-    if(training_data) {
+    if(!is_trained && training_data) {
         this.train(training_data)
     }
 }
