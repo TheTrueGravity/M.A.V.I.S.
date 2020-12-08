@@ -1,1 +1,2 @@
-# v1.0 of M.A.V.I.S. AI (Multi-Assistant Voice Initiated System)
+# v1.0 of M.A.V.I.S. AI (Multi-Assistant Virtual Interface System)
+
