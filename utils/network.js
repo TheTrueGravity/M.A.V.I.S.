@@ -1,22 +1,41 @@
 const brain = require('brain.js');
-const fs = require('fs')
+const fs = require('fs');
 
 module.exports = function (name, training_data=null) {
     this.name = name
-    if(training_data) {
-        train(training_data)
-    }
-    function train(training_data=null) {
+    this.training_data = training_data
+    this.network = new brain.NeuralNetwork();
+
+    this.train = function (training_data=null) {
         var data = []
         if (training_data) {
             data = training_data
         } else {
-            const d = require('./net-data/training-data.json')
+            const d = require('./utils/net-data/training-data.json')
             if(d[this.name]) {
                 data = d[this.name]
             } else {
                 console.error(new Error("No training data was provided!"))
             }
         }
+        console.log("Achieved training data!")
+        console.log('Training...');
+
+        const start_time = new Date();
+
+        this.network.train(data)
+
+        const finished_time = new Date();
+
+        const dif_in_time = (finished_time - start_time) / 1000
+
+        console.log(`Finished training in ${dif_in_time} seconds!`)
+
+        const json = this.network.toJSON();
+        fs.writeFileSync('./utils/net-data/trained_network.json', JSON.stringify(json));
+    }
+
+    if(training_data) {
+        this.train(training_data)
     }
 }
