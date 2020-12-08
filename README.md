@@ -3,3 +3,5 @@
 A virtual assistant created by Charlie using Node.js!
 
 This assistant is a work in progress an I do not reccomend downloading it and trying it untill it is finished!
+
+![Alt text](./)
