@@ -1,3 +1,6 @@
 const util = require('./utils/util');
 
-util.speak.run("test command")
+var net = new util.network("test")
+
+net.test()
+//util.speak.run("test command")
