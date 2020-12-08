@@ -11,7 +11,7 @@ module.exports = function (name, training_data=null) {
         if (training_data) {
             data = training_data
         } else {
-            const d = require('./utils/net-data/training-data.json')
+            const d = require('./net-data/training-data.json')
             if(d[this.name]) {
                 data = d[this.name]
             } else {
@@ -31,8 +31,17 @@ module.exports = function (name, training_data=null) {
 
         console.log(`Finished training in ${dif_in_time} seconds!`)
 
-        const json = this.network.toJSON();
-        fs.writeFileSync('./utils/net-data/trained_network.json', JSON.stringify(json));
+        var trained_network = require('./net-data/trained_network.json');
+        trained_network[this.name] = {}
+        trained_network[this.name] = this.network.toJSON();
+        fs.writeFileSync('./src/utils/net-data/trained_network.json', JSON.stringify(trained_network));
+    }
+
+    var trained_network = require('./net-data/trained_network.json');
+
+    if(trained_network[this.name]) {
+        this.network.fromJSON(trained_network[this.name])
+        console.log("Loaded network from cached data!")
     }
 
     if(training_data) {
