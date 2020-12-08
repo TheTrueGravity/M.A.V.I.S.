@@ -1,3 +1,3 @@
-const speak = require('./util/speak')
+const util = require('./utils/util')
 
-speak.run("hello")
+util.speak.run("test command")
