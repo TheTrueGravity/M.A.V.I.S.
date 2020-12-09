@@ -8,7 +8,15 @@ const util = require('./utils/util');
 const test = new util.network_num("test")
 const get_command = new util.network_str("get_command");
 
-var input = readline.prompt().toString()
-    .replace('?', '')
-    .replace('!', '')
-    .replace('.', '')
+var input = readline.question('', ans => {
+    ans = ans.toString()
+        .replace('?', '')
+        .replace('!', '')
+        .replace('.', '')
+    next(ans)
+});
+
+function next(answer) {
+    var output = get_command.resolve(get_command.network.run(answer));
+    console.log(output)
+}
