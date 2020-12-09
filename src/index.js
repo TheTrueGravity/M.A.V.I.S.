@@ -10,6 +10,7 @@ const get_command = new util.network_str("get_command");
 
 var input = readline.question('', ans => {
     ans = ans.toString()
+        .toLowerCase()
         .replace('?', '')
         .replace('!', '')
         .replace('.', '')
