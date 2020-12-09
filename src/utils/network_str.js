@@ -15,7 +15,7 @@ module.exports = function (name, training_data=null) {
             if(d[this.name]) {
                 data = d[this.name]
             } else {
-                console.error(new Error("No training data was provided!"))
+                return console.error(new Error("No training data was provided!"))
             }
         }
         console.log("Achieved training data!")
@@ -52,7 +52,7 @@ module.exports = function (name, training_data=null) {
         }
     }
 
-    if(!is_trained && training_data) {
+    if(!is_trained && this.training_data) {
         this.train(training_data)
     }
 }

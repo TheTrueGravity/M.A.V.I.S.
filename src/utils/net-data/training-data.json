@@ -4,5 +4,17 @@
         {"input": [0, 1, 0], "output": [0]},
         {"input": [1, 0, 1], "output": [1]},
         {"input": [1, 1, 0], "output": [1]}
+    ],
+    "get_command": [
+        {"input": "who are you", "output": ["about_me ", "question ", "null ", "false"]},
+        {"input": "what are you", "output": ["about_me ", "question ", "null ", "false"]},
+        {"input": "what is the meaning of life", "output": ["meaning_of_life ", "question ", "questional ", "false"]},
+        {"input": "google", "output": ["google ", "question ", "null ", "true"]},
+        {"input": "add", "output": ["calculate_add ", "question ", "null ", "true"]},
+        {"input": "subtract", "output": ["calculate_subtract ", "question ", "null ", "true"]},
+        {"input": "take away", "output": ["calculate_subtract ", "question ", "null ", "true"]},
+        {"input": "multiply", "output": ["calculate_multiply ", "question ", "null ", "true"]},
+        {"input": "times", "output": ["calculate_multiply ", "question ", "null ", "true"]},
+        {"input": "devide", "output": ["calculate_devide ", "question ", "null ", "true"]}
     ]
 }
