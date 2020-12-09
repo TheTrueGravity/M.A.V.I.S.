@@ -6,12 +6,11 @@ A virtual assistant created by Charlie using Node.js!
 
 This assistant is a work in progress an I do not reccomend downloading it and trying it untill it is finished!
 
-# Commands
-
-Disclaimer!
+# Disclaimer!
 
 None of these commands are currently functional, but will be implemented later on!
 
+# Commands
 
 Who/what are you? ( Displays information about the bot! )
 
