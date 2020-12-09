@@ -36,6 +36,23 @@ module.exports = function (name, training_data=null) {
         trained_network[this.name] = this.network.toJSON();
         fs.writeFileSync('./src/utils/net-data/trained_network.json', JSON.stringify(trained_network));
     }
+    
+    this.resolve = function (net_output) {
+        var network_output = net_output.split(/ +/)
+        var return_out = []
+        for (var output of network_output) {
+            if (output == "null") {
+                return_out[return_out.length] = null
+            } else if (output == "true") {
+                return_out[return_out.length] = true
+            } else if (output == "false") {
+                return_out[return_out.length] = false
+            } else {
+                return_out[return_out.length] = output
+            }
+        }
+        return return_out
+    }
 
     var trained_network = require('./net-data/trained_network.json');
     var is_trained = false
