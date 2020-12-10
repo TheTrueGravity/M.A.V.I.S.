@@ -8,13 +8,13 @@ This assistant is a work in progress an I do not reccomend downloading it and tr
 
 To run the program, please ensure that you have Node.js installed, and run npm start in the base directory of the project!
 
-# Disclaimer!
-
-None of these commands are currently functional, but will be implemented later on!
-
 # Dependancies
 
 mavis-utils ( https://github.com/TheTrueGravity/mavis-utils/ )
+
+# Disclaimer!
+
+None of these commands are currently functional, but will be implemented later on!
 
 # Commands
 
