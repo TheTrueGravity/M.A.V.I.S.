@@ -12,6 +12,10 @@ To run the program, please ensure that you have Node.js installed, and run npm s
 
 None of these commands are currently functional, but will be implemented later on!
 
+# Dependancies
+
+mavis-utils
+
 # Commands
 
 Who/what are you? ( Displays information about the bot! )
