@@ -14,7 +14,7 @@ None of these commands are currently functional, but will be implemented later o
 
 # Dependancies
 
-mavis-utils
+mavis-utils ( https://github.com/TheTrueGravity/mavis-utils/ )
 
 # Commands
 
