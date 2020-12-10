@@ -19,6 +19,7 @@
   "homepage": "https://github.com/TheTrueGravity/M.A.V.I.S.#readme",
   "dependencies": {
     "brain.js": "^2.0.0-beta.2",
+    "mavis-utils": "^1.0.0",
     "say": "^0.16.0"
   },
   "devDependencies": {}

@@ -3,7 +3,7 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-const util = require('./utils/util');
+const utils = require('mavis-utils');
 const get_command = new util.network_str("get_command");
 
 var input = readline.question('', ans => {
