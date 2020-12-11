@@ -6,6 +6,10 @@ module.exports = function (name, training_data=null) {
     this.training_data = training_data
     this.network = new brain.NeuralNetwork();
 
+    this.run = function (input) {
+        return this.network.run(input);
+    }
+
     this.train = function (training_data=null) {
         var data = []
         if (training_data) {
