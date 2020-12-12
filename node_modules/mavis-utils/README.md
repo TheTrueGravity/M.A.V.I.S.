@@ -65,3 +65,22 @@ A script to speak what you input
 1 function:
 
 run: Speaks the input ( takes in a string )
+
+# speech_rec
+
+Description:
+
+Takes in audio input from the microphone and translates it to text
+
+#
+
+To run, call the function:
+
+```
+var data = null;
+
+utils.speech_rec((output) => {
+    //run code you want here
+    data = output
+});
+```
