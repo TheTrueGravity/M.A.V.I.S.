@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/TheTrueGravity/M.A.V.I.S.#readme",
   "dependencies": {
-    "mavis-utils": "^1.3.0"
+    "mavis-local-clients": "^1.1.1",
+    "mavis-utils": "^1.3.2"
   },
   "devDependencies": {}
 }
